@@ -35,13 +35,15 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             btnSumar = new Button();
+            historialDataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)historialDataGridView).BeginInit();
             SuspendLayout();
             // 
             // formTitulo
             // 
             formTitulo.AutoSize = true;
             formTitulo.Font = new Font("Segoe UI", 30F);
-            formTitulo.Location = new Point(58, 31);
+            formTitulo.Location = new Point(41, 9);
             formTitulo.Name = "formTitulo";
             formTitulo.Size = new Size(285, 67);
             formTitulo.TabIndex = 0;
@@ -51,18 +53,17 @@
             // 
             labelNumeroA.AutoSize = true;
             labelNumeroA.Font = new Font("Segoe UI", 15F);
-            labelNumeroA.Location = new Point(105, 135);
+            labelNumeroA.Location = new Point(41, 129);
             labelNumeroA.Name = "labelNumeroA";
             labelNumeroA.Size = new Size(130, 35);
             labelNumeroA.TabIndex = 1;
             labelNumeroA.Text = "Numero A";
-            labelNumeroA.Click += labelNumeroA_Click;
             // 
             // labelNumeroB
             // 
             labelNumeroB.AutoSize = true;
             labelNumeroB.Font = new Font("Segoe UI", 15F);
-            labelNumeroB.Location = new Point(105, 187);
+            labelNumeroB.Location = new Point(41, 181);
             labelNumeroB.Name = "labelNumeroB";
             labelNumeroB.Size = new Size(128, 35);
             labelNumeroB.TabIndex = 3;
@@ -72,7 +73,7 @@
             // 
             labelResultado.AutoSize = true;
             labelResultado.Font = new Font("Segoe UI", 35F);
-            labelResultado.Location = new Point(58, 269);
+            labelResultado.Location = new Point(41, 389);
             labelResultado.Name = "labelResultado";
             labelResultado.Size = new Size(344, 78);
             labelResultado.TabIndex = 2;
@@ -80,14 +81,14 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(322, 135);
+            textBox1.Location = new Point(216, 129);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(322, 196);
+            textBox2.Location = new Point(216, 190);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(125, 27);
             textBox2.TabIndex = 5;
@@ -95,7 +96,7 @@
             // btnSumar
             // 
             btnSumar.Font = new Font("Segoe UI", 20F);
-            btnSumar.Location = new Point(529, 156);
+            btnSumar.Location = new Point(157, 269);
             btnSumar.Name = "btnSumar";
             btnSumar.Size = new Size(140, 53);
             btnSumar.TabIndex = 6;
@@ -103,11 +104,21 @@
             btnSumar.UseVisualStyleBackColor = true;
             btnSumar.Click += btnSumar_Click;
             // 
+            // historialDataGridView
+            // 
+            historialDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            historialDataGridView.Location = new Point(456, 11);
+            historialDataGridView.Name = "historialDataGridView";
+            historialDataGridView.RowHeadersWidth = 51;
+            historialDataGridView.Size = new Size(219, 488);
+            historialDataGridView.TabIndex = 7;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(688, 507);
+            Controls.Add(historialDataGridView);
             Controls.Add(btnSumar);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -118,6 +129,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)historialDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,5 +143,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Button btnSumar;
+        private DataGridView historialDataGridView;
     }
 }
