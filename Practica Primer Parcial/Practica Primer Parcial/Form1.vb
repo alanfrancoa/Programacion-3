@@ -27,10 +27,8 @@
         Dim acumulador As Double = 0
         Dim acumuladorP As Double = 0
         Dim contadorP As Integer = 0
-        Dim contador As Integer = dtProductos.Rows.Count
 
-        If contador > 0 Then
-            For Each renglon As DataRow In dtProductos.Rows
+        For Each renglon As DataRow In dtProductos.Rows
                 acumulador += renglon("Precio")
                 Dim producto As String = renglon("Producto")
 
@@ -40,34 +38,28 @@
                 End If
             Next
 
-            Label7.Text = contador.ToString()
+        LabelTotalCarrito.Text = acumulador.ToString("#0.00")
 
-            Dim promedio = acumulador / contador
-            Label9.Text = promedio.ToString("#0.00")
+        Dim promedio = acumulador / dtProductos.Rows.Count
+        LabelPromedioCarrito.Text = promedio.ToString("#0.00")
 
-            Label8.Text = contadorP.ToString()
+        LabelTotalCarritoP.Text = acumuladorP.ToString("#0.00")
 
-            If contadorP > 0 Then
+        If contadorP > 0 Then
                 Dim promedioP = acumuladorP / contadorP
-                Label10.Text = promedioP.ToString("#0.00")
+            LabelPromedioCarritoP.Text = promedioP.ToString("#0.00")
 
-            Else
-                Label10.Text = "0.00"
-            End If
         Else
-            Label7.Text = "0"
-            Label9.Text = "0.00"
-            Label8.Text = "0"
-            Label10.Text = "0.00"
+            LabelPromedioCarritoP.Text = "0.00"
         End If
 
     End Sub
 
 #End Region
 #Region "Eventos"
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim producto = TextBox1.Text
-        Dim precio = Double.Parse(TextBox2.Text)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonAdd.Click
+        Dim producto = TextBoxProducto.Text
+        Dim precio = Double.Parse(TextBoxPrecio.Text)
 
         Me.dtProductos.Rows.Add(producto, precio)
 

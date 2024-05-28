@@ -24,20 +24,20 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ButtonAdd = New System.Windows.Forms.Button()
+        Me.LabelPrecio = New System.Windows.Forms.Label()
+        Me.LabelNombre = New System.Windows.Forms.Label()
+        Me.TextBoxPrecio = New System.Windows.Forms.TextBox()
+        Me.TextBoxProducto = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.LabelPromedioCarritoP = New System.Windows.Forms.Label()
+        Me.LabelPromedioCarrito = New System.Windows.Forms.Label()
+        Me.LabelTotalCarritoP = New System.Windows.Forms.Label()
+        Me.LabelTotalCarrito = New System.Windows.Forms.Label()
+        Me.LabelPromedio = New System.Windows.Forms.Label()
+        Me.LabelTotalProdP = New System.Windows.Forms.Label()
+        Me.LabelPromedioP = New System.Windows.Forms.Label()
+        Me.LabelTotalProd = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -53,11 +53,11 @@ Partial Class Form1
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.ButtonAdd)
+        Me.GroupBox1.Controls.Add(Me.LabelPrecio)
+        Me.GroupBox1.Controls.Add(Me.LabelNombre)
+        Me.GroupBox1.Controls.Add(Me.TextBoxPrecio)
+        Me.GroupBox1.Controls.Add(Me.TextBoxProducto)
         Me.GroupBox1.Location = New System.Drawing.Point(2, 8)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(330, 316)
@@ -65,58 +65,58 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Productos"
         '
-        'Button1
+        'ButtonAdd
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(27, 201)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(263, 26)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonAdd.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonAdd.Location = New System.Drawing.Point(27, 201)
+        Me.ButtonAdd.Name = "ButtonAdd"
+        Me.ButtonAdd.Size = New System.Drawing.Size(263, 26)
+        Me.ButtonAdd.TabIndex = 4
+        Me.ButtonAdd.Text = "Agregar"
+        Me.ButtonAdd.UseVisualStyleBackColor = True
         '
-        'Label2
+        'LabelPrecio
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(10, 105)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Precio"
+        Me.LabelPrecio.AutoSize = True
+        Me.LabelPrecio.Location = New System.Drawing.Point(10, 105)
+        Me.LabelPrecio.Name = "LabelPrecio"
+        Me.LabelPrecio.Size = New System.Drawing.Size(37, 13)
+        Me.LabelPrecio.TabIndex = 3
+        Me.LabelPrecio.Text = "Precio"
         '
-        'Label1
+        'LabelNombre
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(10, 50)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Nombre"
+        Me.LabelNombre.AutoSize = True
+        Me.LabelNombre.Location = New System.Drawing.Point(10, 50)
+        Me.LabelNombre.Name = "LabelNombre"
+        Me.LabelNombre.Size = New System.Drawing.Size(50, 13)
+        Me.LabelNombre.TabIndex = 2
+        Me.LabelNombre.Text = "Producto"
         '
-        'TextBox2
+        'TextBoxPrecio
         '
-        Me.TextBox2.Location = New System.Drawing.Point(10, 121)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(311, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.TextBoxPrecio.Location = New System.Drawing.Point(10, 121)
+        Me.TextBoxPrecio.Name = "TextBoxPrecio"
+        Me.TextBoxPrecio.Size = New System.Drawing.Size(311, 20)
+        Me.TextBoxPrecio.TabIndex = 1
         '
-        'TextBox1
+        'TextBoxProducto
         '
-        Me.TextBox1.Location = New System.Drawing.Point(10, 66)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(311, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.TextBoxProducto.Location = New System.Drawing.Point(10, 66)
+        Me.TextBoxProducto.Name = "TextBoxProducto"
+        Me.TextBoxProducto.Size = New System.Drawing.Size(311, 20)
+        Me.TextBoxProducto.TabIndex = 0
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.LabelPromedioCarritoP)
+        Me.GroupBox2.Controls.Add(Me.LabelPromedioCarrito)
+        Me.GroupBox2.Controls.Add(Me.LabelTotalCarritoP)
+        Me.GroupBox2.Controls.Add(Me.LabelTotalCarrito)
+        Me.GroupBox2.Controls.Add(Me.LabelPromedio)
+        Me.GroupBox2.Controls.Add(Me.LabelTotalProdP)
+        Me.GroupBox2.Controls.Add(Me.LabelPromedioP)
+        Me.GroupBox2.Controls.Add(Me.LabelTotalProd)
         Me.GroupBox2.Location = New System.Drawing.Point(2, 343)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(330, 316)
@@ -124,85 +124,85 @@ Partial Class Form1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Resultados"
         '
-        'Label10
+        'LabelPromedioCarritoP
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(249, 223)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(40, 20)
-        Me.Label10.TabIndex = 7
-        Me.Label10.Text = "0.00"
+        Me.LabelPromedioCarritoP.AutoSize = True
+        Me.LabelPromedioCarritoP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPromedioCarritoP.Location = New System.Drawing.Point(249, 223)
+        Me.LabelPromedioCarritoP.Name = "LabelPromedioCarritoP"
+        Me.LabelPromedioCarritoP.Size = New System.Drawing.Size(40, 20)
+        Me.LabelPromedioCarritoP.TabIndex = 7
+        Me.LabelPromedioCarritoP.Text = "0.00"
         '
-        'Label9
+        'LabelPromedioCarrito
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(249, 170)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(40, 20)
-        Me.Label9.TabIndex = 6
-        Me.Label9.Text = "0.00"
+        Me.LabelPromedioCarrito.AutoSize = True
+        Me.LabelPromedioCarrito.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPromedioCarrito.Location = New System.Drawing.Point(249, 170)
+        Me.LabelPromedioCarrito.Name = "LabelPromedioCarrito"
+        Me.LabelPromedioCarrito.Size = New System.Drawing.Size(40, 20)
+        Me.LabelPromedioCarrito.TabIndex = 6
+        Me.LabelPromedioCarrito.Text = "0.00"
         '
-        'Label8
+        'LabelTotalCarritoP
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(271, 117)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(18, 20)
-        Me.Label8.TabIndex = 5
-        Me.Label8.Text = "0"
+        Me.LabelTotalCarritoP.AutoSize = True
+        Me.LabelTotalCarritoP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTotalCarritoP.Location = New System.Drawing.Point(250, 117)
+        Me.LabelTotalCarritoP.Name = "LabelTotalCarritoP"
+        Me.LabelTotalCarritoP.Size = New System.Drawing.Size(40, 20)
+        Me.LabelTotalCarritoP.TabIndex = 5
+        Me.LabelTotalCarritoP.Text = "0.00"
         '
-        'Label7
+        'LabelTotalCarrito
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(271, 65)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(18, 20)
-        Me.Label7.TabIndex = 4
-        Me.Label7.Text = "0"
+        Me.LabelTotalCarrito.AutoSize = True
+        Me.LabelTotalCarrito.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTotalCarrito.Location = New System.Drawing.Point(250, 65)
+        Me.LabelTotalCarrito.Name = "LabelTotalCarrito"
+        Me.LabelTotalCarrito.Size = New System.Drawing.Size(40, 20)
+        Me.LabelTotalCarrito.TabIndex = 4
+        Me.LabelTotalCarrito.Text = "0.00"
         '
-        'Label6
+        'LabelPromedio
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(10, 170)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(199, 20)
-        Me.Label6.TabIndex = 3
-        Me.Label6.Text = "Promedio de productos:"
+        Me.LabelPromedio.AutoSize = True
+        Me.LabelPromedio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPromedio.Location = New System.Drawing.Point(10, 170)
+        Me.LabelPromedio.Name = "LabelPromedio"
+        Me.LabelPromedio.Size = New System.Drawing.Size(199, 20)
+        Me.LabelPromedio.TabIndex = 3
+        Me.LabelPromedio.Text = "Promedio de productos:"
         '
-        'Label5
+        'LabelTotalProdP
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(10, 117)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(183, 20)
-        Me.Label5.TabIndex = 2
-        Me.Label5.Text = "Cant. de productos P:"
+        Me.LabelTotalProdP.AutoSize = True
+        Me.LabelTotalProdP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTotalProdP.Location = New System.Drawing.Point(10, 117)
+        Me.LabelTotalProdP.Name = "LabelTotalProdP"
+        Me.LabelTotalProdP.Size = New System.Drawing.Size(155, 20)
+        Me.LabelTotalProdP.TabIndex = 2
+        Me.LabelTotalProdP.Text = "Total productos P:"
         '
-        'Label4
+        'LabelPromedioP
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(9, 223)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(215, 20)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Promedio de productos P:"
+        Me.LabelPromedioP.AutoSize = True
+        Me.LabelPromedioP.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelPromedioP.Location = New System.Drawing.Point(9, 223)
+        Me.LabelPromedioP.Name = "LabelPromedioP"
+        Me.LabelPromedioP.Size = New System.Drawing.Size(215, 20)
+        Me.LabelPromedioP.TabIndex = 1
+        Me.LabelPromedioP.Text = "Promedio de productos P:"
         '
-        'Label3
+        'LabelTotalProd
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(10, 65)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(196, 20)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Cantidad de productos:"
+        Me.LabelTotalProd.AutoSize = True
+        Me.LabelTotalProd.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTotalProd.Location = New System.Drawing.Point(10, 65)
+        Me.LabelTotalProd.Name = "LabelTotalProd"
+        Me.LabelTotalProd.Size = New System.Drawing.Size(140, 20)
+        Me.LabelTotalProd.TabIndex = 0
+        Me.LabelTotalProd.Text = "Total Productos:"
         '
         'Form1
         '
@@ -225,18 +225,18 @@ Partial Class Form1
 
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ButtonAdd As Button
+    Friend WithEvents LabelPrecio As Label
+    Friend WithEvents LabelNombre As Label
+    Friend WithEvents TextBoxPrecio As TextBox
+    Friend WithEvents TextBoxProducto As TextBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents LabelPromedio As Label
+    Friend WithEvents LabelTotalProdP As Label
+    Friend WithEvents LabelPromedioP As Label
+    Friend WithEvents LabelTotalProd As Label
+    Friend WithEvents LabelPromedioCarritoP As Label
+    Friend WithEvents LabelPromedioCarrito As Label
+    Friend WithEvents LabelTotalCarritoP As Label
+    Friend WithEvents LabelTotalCarrito As Label
 End Class
